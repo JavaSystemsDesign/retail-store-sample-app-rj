@@ -51,6 +51,7 @@ public class OrderService extends AbstractRelationalEventListener<OrderEntity> {
   }
 
   public List<OrderEntity> list() {
+    System.out.println("Listing all orders");
     return StreamSupport.stream(
       this.repository.findAll().spliterator(),
       false
